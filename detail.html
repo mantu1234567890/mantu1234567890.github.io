@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Keralkart</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+<!-- jquery cdn - javascript upgrade -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<style>
+    .header{
+        background-color: #C38749;
+       padding-top: 15px;
+        height: 50px;
+    }
+    .second-header{
+        height: 100px;
+        padding-top: 4px;
+       background-color: rgb(250, 245, 245);
+    border: 1px solid rgb(243, 239, 239);
+    
+
+    }
+       .style-icon{
+         border: 1px solid black;
+         border-radius: 50%;
+         padding: 7px;
+         width: 30px;
+         }
+         .style-icon:hover{
+            background-color: rgb(248, 248, 191);
+            }
+            #image{
+                padding-top: 20px;
+
+            }
+
+        #icon55{
+            padding-top: 30px;
+        
+        }    
+          .icon11{ 
+            margin: 5px;
+          }
+          li.list-group-item{
+            background-color: transparent;
+            border-bottom: 0;
+          color: #8C8C8C  ;
+          }
+            
+          .product-design{
+            padding: 2px;
+            border: 1px solid #bcbcbc;
+            cursor: pointer;
+          }
+          /* to give shadow effect on hover */
+          .product-design:hover{
+            box-shadow: 0px 0px 10px grey;
+          }
+    </style>
+</head>
+<body>
+    <div class="header row">
+        <div class="col-sm-4 text-center">
+            <a href="https://m.facebook.com"><i class="fa fa-facebook-official text-white"></i></a>
+            <a href="https://m.youtube.com/"><i class="fa fa-youtube-play text-white"></i></a>
+            <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Flogin" target="_blank"><i class="fa fa-twitter text-white"></i></a>
+        </div>
+        <div class="col-sm-4 "><a href="https://www.whatsapp.com/" target="_blank" class="text-white"><i class="fa fa-whatsapp text-white"></i>  Order through whatsapp +91-987654310</a>
+        </div>
+        <div class="col-sm-4"><a href="mailto:info@keralkart.com" target="_blank" class="text-white"><i class="fa fa-envelope text-white"></i>  info@keralkart.com</a></div>
+
+    </div>
+<div class="row second-header">
+  <div class="col-3 text-center" id="image">
+    <img src="logo.png" style="height: 80px;">    
+</div> 
+<div class="col-6">
+
+</div>
+<div class="col-3" id="icon55">
+    <a href="#"><i class=" icon11 fa fa-whatsapp text-black style-icon"></i></a>
+    <a href="#"><i class=" icon11 fa fa-user-o text-black style-icon"></i></a>
+    <a href="#"><i class=" icon11 fa fa-search text-black style-icon"></i></a>
+    <a href="#"><i class=" icon11 fa fa-shopping-basket text-black style-icon"></i></a>
+
+</div>
+</div>
+
+<div class="container" style="padding: 20px;">
+   <div class="row">
+       <div class="col-12">
+       <h5><a href="keralkart.html"><i class="fa fa-home " aria-hidden="true"></i></a>
+        <i class="fa fa-angle-right " aria-hidden="true"></i>
+            <b>Fancy Digital Print Lehenga</b></h5>
+       </div>
+
+   </div>
+</div>
+<style>
+  td.smallfont{
+    font-size: 12.5px ;
+  }
+  td.bigfont{
+    font-size: 13.5px ;
+    font-weight: bold;
+  }
+</style>
+<div class="container">
+  <div class="row">
+      <div class="col-md-5">
+       <img src="product25.png" class="img-fluid">
+            
+      </div>
+      <div class="col-md-4">
+        <h4><b>New Designer Digital And Chochet Work Kurti With Shrug</b></h4><hr>
+        <br>
+        <table class="table table-borderless">
+          <tr>
+            <td class="bigfont">Brand:</td>
+            <td class="smallfont">Rama collection</td>
+          </tr>
+          <tr>
+            <td class="bigfont">Product code:</td>
+            <td class="smallfont">009937365dgytr6</td>
+          </tr>
+
+        </table>
+           
+        <div class="input-group has-validation">
+          Quantity
+          <span class="input-group-text" onclick="removecart()"><i class="fa fa-minus" aria-hidden="true"></i></span>
+          <div>
+            <input type="text" class="form-control is-" id="quantity" style="width: 50px;" value="1" min="1" style required>
+           
+          </div>
+          <span class="input-group-text" onclick="addtocart()"><i class="fa fa-plus" aria-hidden="true"></i></span>
+        </div>
+    <br><hr>
+
+      </div>
+
+  </div>
+</div>
+        <script>
+          function removecart(){ 
+            var x = document.getElementById('quantity').value;
+            if(x >= 2){
+              var y = parseInt(x) -1;
+              document.getElementById("quantity").value = y;
+            }
+            
+          
+          }
+          function addtocart(){
+            var quantity=document.getElementById('quantity').value;
+            var qty= parseInt(quantity) +1;
+            document.getElementById("quantity").value= qty;
+            
+          }
+
+</script>
+
+
+
+
+<div class="container-fluid">
+    <div class="row justify-content-around" style="background-color: darkgreen; padding-top: 20px; padding-bottom: 20px;">
+        <div class="col-2">
+          <div class="row">
+                <div class="col-3">
+                  <i class="fa fa-gift fa-3x " style="color: #fff;" aria-hidden="true"></i>
+                </div>
+                <div class="col-9">
+                  <p style="color: #fff;">
+                    <b> Special gift card </b><br><small>give a perfect gift</small>
+                  </p>
+                </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="row">
+                <div class="col-3">
+                  <i class="fa fa-money fa-3x " style="color: #fff;" aria-hidden="true"></i>
+                </div>
+                <div class="col-9">
+                  <p style="color: #fff;">
+                    <b> Secure payment </b><br> <small>100% secure payment</small>
+                  </p>
+                </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="row">
+                <div class="col-3">
+                  <i class="fa fa-support fa-3x " style="color: #fff;" aria-hidden="true"></i>
+                </div>
+                <div class="col-9">
+                  <p style="color: #fff;">
+                    <b> Online support</b><br> <small>24/7 support available</small>
+                  </p>
+                </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="row">
+                <div class="col-3">
+                  <i class="fa fa-truck fa-3x " style="color: #fff;" aria-hidden="true"></i>
+                </div>
+                <div class="col-9">
+                  <p style="color: #fff;">
+                    <b> Free shipping </b><br> <small>on order above 500</small>
+                  </p>
+                </div>
+          </div>
+        </div>
+      </div>
+    <div class="row" style="background-color: #0d5522; color: #8C8C8C; padding: 40px;">
+      <div class="col-3">
+        <h4 style="color: #fff; padding-left: 10px;">EXTRAS</h4>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Blog</li>
+          <li class="list-group-item">Brands</li>
+          <li class="list-group-item">Gift Certificates</li>
+          <li class="list-group-item">Affiliate</li>
+          <li class="list-group-item">Special</li>
+          <li class="list-group-item">Site Map</li>
+
+        </ul>
+
+      </div>
+      <div class="col-3">
+        <h4 style="color: #fff; padding-left: 10px;">INFORMATION</h4>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">About Us</li>
+          <li class="list-group-item">Shipping Policies</li>
+          <li class="list-group-item">Privacy Policy for keralkart</li>
+          <li class="list-group-item">Terms & Conditions</li>
+          <li class="list-group-item">Contact Us</li>
+          <li class="list-group-item">Site Map</li>
+
+        </ul>
+
+      </div>
+      <div class="col-3">
+        <h4 style="color: #fff; padding-left: 10px;">MY ACCOUNT</h4>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">My Acount</li>
+          <li class="list-group-item">Order list</li>
+          <li class="list-group-item">Wish List</li>
+          <li class="list-group-item">Newsletter</li>
+          <li class="list-group-item">Returns</li>
+          
+
+        </ul>
+
+      </div>
+      <div class="col-3">
+        <h4 style="color: #fff; padding-left: 10px;">CONTACT US</h4>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"> <i class="fa fa-map-marker" aria-hidden="true" style="color: #fff;"></i>
+             &nbsp;RKDF,RANCHI</li>
+          <li class="list-group-item"> <i class="fa fa-envelope" aria-hidden="true" style="color: #fff;"></i>
+            &nbsp;rkdfcollege@gmail.com</li>
+          <li class="list-group-item"> <i class="fa fa-phone" aria-hidden="true" style="color: #fff;"></i>
+           &nbsp; +91 9876543210</li>
+          <li class="list-group-item"> <i class="fa fa-telegram" aria-hidden="true" style="color: #fff;"></i>
+            &nbsp;Ranchi,Jharkhand</li>
+          
+
+        </ul>
+
+      </div>
+      
+    </div>  
+</div>
+
+
+
+</body>
+</html>
