@@ -10,6 +10,7 @@
 
 <!-- jquery cdn - javascript upgrade -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="script.js"></script>
 <style>
     .header{
         background-color: #C38749;
@@ -59,6 +60,9 @@
           /* to give shadow effect on hover */
           .product-design:hover{
             box-shadow: 0px 0px 10px grey;
+          }
+          .fa-star-o{
+            cursor: pointer;
           }
     </style>
 </head>
@@ -142,6 +146,18 @@
     <br><hr>
 
       </div>
+      <div class="col-md-3" style="background-color: #f2f2f2;">
+        <p>Availability : 10 </p>
+            <div><i class="fa fa-star-o star1"  onclick="starRating('star1')"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+
+
+      </div>
+
 
   </div>
 </div>
