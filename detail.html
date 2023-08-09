@@ -46,10 +46,11 @@
           .icon11{ 
             margin: 5px;
           }
-          li.list-group-item{
+          li.list-group-item, li.list-group-item a {
             background-color: transparent;
             border-bottom: 0;
           color: #8C8C8C  ;
+          text-decoration: none;
           }
             
           .product-design{
@@ -61,7 +62,7 @@
           .product-design:hover{
             box-shadow: 0px 0px 10px grey;
           }
-          .fa-star-o{
+          .fa-star-o,.fa-star, .fa-plus, .fa-minus{
             cursor: pointer;
           }
     </style>
@@ -116,7 +117,7 @@
 <div class="container">
   <div class="row">
       <div class="col-md-5">
-       <img src="product25.png" class="img-fluid">
+       <img src="product25.png" class="img-fluid" title="hello world">
             
       </div>
       <div class="col-md-4">
@@ -143,24 +144,107 @@
           </div>
           <span class="input-group-text" onclick="addtocart()"><i class="fa fa-plus" aria-hidden="true"></i></span>
         </div>
-    <br><hr>
-
+        <br><hr>
+        <div>
+          <button class="btn btn-success" title="Add to Cart">Add to Cart</button>
+          <button class="btn btn-success" title="Add to Wishlist"><i class="fa fa-heart"></i></button>
+          <button class="btn btn-success" title="Add to Compare"><i class="fa fa-expand"></i></button>
+        </div>
       </div>
       <div class="col-md-3" style="background-color: #f2f2f2;">
         <p>Availability : 10 </p>
-            <div><i class="fa fa-star-o star1"  onclick="starRating('star1')"></i>
-              <i class="fa fa-star-o"></i>
-              <i class="fa fa-star-o"></i>
-              <i class="fa fa-star-o"></i>
-              <i class="fa fa-star-o"></i>
+        <h5>&#8377; 1,099</h5>
+        <p><small>Excl. Tax : &#8377; 1,099</small> </p>
+            <div><i class="fa fa-star-o star1"></i>
+              <i class="fa fa-star-o star1"></i>
+              <i class="fa fa-star-o star1"></i>
+              <i class="fa fa-star-o star1"></i>
+              <i class="fa fa-star-o star1"></i>
+
+              <span class="text-success">0 review</span>
+              <span class="text-success"><a href="#">Write a review</a></span>
+
             </div>
+            <br><hr><br>
+            <!-- AddToAny BEGIN -->
+            <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+              <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+              <a class="a2a_button_facebook"></a>
+              <a class="a2a_button_twitter"></a>
+              <a class="a2a_button_email"></a>
+              <a class="a2a_button_linkedin"></a>
+              </div>
+              <script async src="https://static.addtoany.com/menu/page.js"></script>
+              <!-- AddToAny END -->
 
 
       </div>
 
+      <style>
+        .fa-star{
+          color: green;
+        }
+      </style>
+  </div>
 
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="specs-tab" data-bs-toggle="tab" data-bs-target="#Specification" type="button" role="tab" aria-controls="Specification" aria-selected="true">Specification</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="desc-tab" data-bs-toggle="tab" data-bs-target="#Description" type="button" role="tab" aria-controls="Description" aria-selected="false">Description</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="review-tab" data-bs-toggle="tab" data-bs-target="#Review" type="button" role="tab" aria-controls="Review" aria-selected="false">Review</button>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="Specification" role="tabpanel" aria-labelledby="specs-tab" tabindex="0">
+          <h5>100% pure Cotton</h5>
+        </div>
+        <div class="tab-pane fade" id="Description" role="tabpanel" aria-labelledby="desc-tab" tabindex="0">
+          <p>(RA1807-29-2) Limited Stock !! New Designer Digital And Chochet Work Kurti With Shrug</p>
+          <hr>
+          <p>Easy to Order : WhtsApp at 7900062897</p>
+
+        </div>
+        <div class="tab-pane fade" id="Review" role="tabpanel" aria-labelledby="review-tab" tabindex="0">
+          <div class="row">
+            <div class="col-md-12">
+                <h4>WRITE A REVIEW</h4>
+            </div>
+            <div class="col-md-12">
+              <form>
+                <label>Name*</label>
+                <input type="text" class="form-control"> <br><br>
+
+                <label>Write a Review*</label>
+                <textarea class="form-control"></textarea> <br><br>
+
+                <label>Rating*</label>
+                <span>Bad</span>
+                <input type="radio" name="rating" value="1">
+                <input type="radio" name="rating" value="2">
+                <input type="radio" name="rating" value="3">
+                <input type="radio" name="rating" value="4">
+                <input type="radio" name="rating" value="5">
+                <span>Best</span><br>
+
+                <button class="btn btn-outline-success" style="float: right;">Submit your review</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+<br>
+<br>
+<br>
+<br>
         <script>
           function removecart(){ 
             var x = document.getElementById('quantity').value;
@@ -238,7 +322,7 @@
       <div class="col-3">
         <h4 style="color: #fff; padding-left: 10px;">EXTRAS</h4>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Blog</li>
+          <li class="list-group-item"><a href="blog.html">Blog</a></li>
           <li class="list-group-item">Brands</li>
           <li class="list-group-item">Gift Certificates</li>
           <li class="list-group-item">Affiliate</li>
